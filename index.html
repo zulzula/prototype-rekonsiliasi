@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="icon" href="public/favicon.png">
+
+ <!-- CoreUI CSS -->
+ <link rel="stylesheet" href="css/coreui.min.css">
+
+ <!-- Icon CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
+ <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css">
+ <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/brand.min.css">
+ <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/flag.min.css">
+
+ <title>e-Rekonsiliasi</title>
+ </head>
+ <body class="c-app">
+   <!-- sidebar -->
+   <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+    <div class="c-sidebar-brand d-lg-down-none">
+      <img class="c-sidebar-brand-full" style="width: 118px; height: 46px;" src="public/logo.png" alt="">
+      <img class="c-sidebar-brand-minimized" style="width: 46px; height: 46px;" src="public/favicon.ico" alt="">
+    </div>
+     <ul class="c-sidebar-nav">
+       <li class="c-sidebar-nav-item">
+        <a href="#" class="c-sidebar-nav-link">
+          <i class="c-sidebar-nav-icon cil-home"></i> E-Rekonsiliasi
+        </a>
+       </li>
+       <li class="c-sidebar-nav-title">Rekonsiliasi</li>
+       <li class="c-sidebar-nav-item">
+         <a href="#" class="c-sidebar-nav-link">
+           <i class="c-sidebar-nav-icon cil-calculator"></i> Keuangan
+         </a>
+       </li>
+       <li class="c-sidebar-nav-item">
+        <a href="#" class="c-sidebar-nav-link">
+          <i class="c-sidebar-nav-icon cil-group"></i> Kepesertaan
+        </a>
+       </li>
+       <li class="c-sidebar-nav-title">Submission</li>
+       <li class="c-sidebar-nav-item">
+         <a href="#" class="c-sidebar-nav-link">
+           <i class="c-sidebar-nav-icon cil-cloud-upload"></i> Pemkab
+         </a>
+       </li>
+       <li class="c-sidebar-nav-title">Approval</li>
+       <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+         <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+           <i class="c-sidebar-nav-icon cil-check"></i> Taspen
+         </a>
+         <ul class="c-sidebar-nav-dropdown-items">
+           <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link"><span class="c-sidebar-nav-icon"></span>Approval 1</a></li>
+           <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link"><span class="c-sidebar-nav-icon"></span>Approval 2</a></li>
+         </ul>
+       </li>
+       <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+          <i class="c-sidebar-nav-icon cil-check-circle"></i> Pemkab
+        </a>
+        <ul class="c-sidebar-nav-dropdown-items">
+          <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link"><span class="c-sidebar-nav-icon"></span>Approval 1</a></li>
+          <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link"><span class="c-sidebar-nav-icon"></span>Approval 2</a></li>
+        </ul>
+      </li>
+
+     </ul>
+     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
+   </div>
+
+   <div class="c-wrapper">
+     <!-- header -->
+    <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
+      <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
+        <span class="c-header-toggler-icon"></span>
+      </button>
+      <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
+        <span class="c-header-toggler-icon"></span>
+      </button>
+      <ul class="c-header-nav ml-auto mr-4">
+        <li class="c-header-nav-item d-md-down-none mx-2">
+          <a class="c-header-nav-link" href="#">
+            <i class="cil-bell"></i>
+          </a>
+        </li>
+        <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
+            <i class="cil-list-rich"></i>
+          </a></li>
+        <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
+            <i class="cil-envelope-open"></i></a></li>
+        <li class="c-header-nav-item dropdown">
+          <a class="c-header-nav-link" href="#">
+            <div class="c-avatar"><i class="cil-apple"></i></div>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- content -->
+    <div class="c-body">
+      <main class="c-main">
+        <div class="container-fluid">
+          <div class="fade-in">
+            <div class="card">
+              <div class="card-body">
+                <div class="jumbotron jumbotron-fluid">
+                  <div class="container">
+                    <h1 class="display-3">E-Rekonsiliasi</h1>
+                    <p class="lead">Selamat datang di portal Taspen untuk keperluan rekonsiliasi.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+   </div>
+
+ <!-- Optional JavaScript -->
+ <!-- Popper.js first, then CoreUI JS -->
+  <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
+ </body>
+</html>
