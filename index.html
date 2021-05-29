@@ -71,8 +71,12 @@
       function login() {
         if ((emails.indexOf(inputs[0].value)!= -1) && (passwords.indexOf(inputs[1].value)!= -1)) {
           if (emails.indexOf(inputs[0].value) == passwords.indexOf(inputs[1].value)) {
-            console.log("bener")
-            window.location.href = "./dashboard.html"
+            value = emails.indexOf(inputs[0].value)
+            if (value == 0 || value == 1) {
+              window.location.href = "./dashboard.html"
+            } else {
+              window.location.href = "./dashboard1.html"
+            }
           }
         }
       }

@@ -30,33 +30,13 @@
           <i class="c-sidebar-nav-icon cil-home"></i> E-Rekonsiliasi
         </a>
        </li>
-       <li class="c-sidebar-nav-title">Rekonsiliasi</li>
-       <li class="c-sidebar-nav-item">
-         <a href="#" class="c-sidebar-nav-link">
-           <i class="c-sidebar-nav-icon cil-calculator"></i> Keuangan
-         </a>
-       </li>
-       <li class="c-sidebar-nav-item">
-        <a href="#" class="c-sidebar-nav-link">
-          <i class="c-sidebar-nav-icon cil-group"></i> Kepesertaan
-        </a>
-       </li>
        <li class="c-sidebar-nav-title">Submission</li>
        <li class="c-sidebar-nav-item">
-         <a href="upload.html" class="c-sidebar-nav-link">
+         <a href="#" class="c-sidebar-nav-link">
            <i class="c-sidebar-nav-icon cil-cloud-upload"></i> Pemkab
          </a>
        </li>
        <li class="c-sidebar-nav-title">Approval</li>
-       <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
-         <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
-           <i class="c-sidebar-nav-icon cil-check"></i> Taspen
-         </a>
-         <ul class="c-sidebar-nav-dropdown-items">
-           <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link"><span class="c-sidebar-nav-icon"></span>Approval 1</a></li>
-           <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link"><span class="c-sidebar-nav-icon"></span>Approval 2</a></li>
-         </ul>
-       </li>
        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
         <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
           <i class="c-sidebar-nav-icon cil-check-circle"></i> Pemkab
@@ -104,12 +84,69 @@
       <main class="c-main">
         <div class="container-fluid">
           <div class="fade-in">
-            <div class="card">
-              <div class="card-body">
-                <div class="jumbotron jumbotron-fluid">
-                  <div class="container">
-                    <h1 class="display-3">E-Rekonsiliasi</h1>
-                    <p class="lead">Selamat datang di portal Taspen untuk keperluan rekonsiliasi.</p>
+            <div class="row justify-content-md-center">
+              <div class="col-sm-8">
+                <div class="card">
+                  <div class="card-header"><strong>Submit Data</strong></div>
+                  <div class="card-body">
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="name">Program</label>
+                      <div class="col-md-9 col-form-label">
+                        <select class="form-control" id="ccprogram">
+                          <option value="0">Pilih program</option>
+                          <option value="1">JKK-JKM</option>
+                          <option value="2">JKK-JKM-DPR</option>
+                          <option value="3">IURAN</option>
+                          <option value="4">Something Else</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="name">Jenis Setoran</label>
+                      <div class="col-md-9 col-form-label">
+                        <select class="form-control" id="ccsetoran">
+                          <option value="0">Pilih jenis setoran</option>
+                          <option value="1">JKK-JKM</option>
+                          <option value="2">JKK-JKM-DPR</option>
+                          <option value="3">IURAN</option>
+                          <option value="4">Something Else</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="date-input">Tanggal Setor</label>
+                      <div class="col-md-9">
+                        <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date"><span class="help-block">Masukan tanggal yang benar</span>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="nominal" class="col-md-3 col-form-label">Jumlah Setoran</label>
+                      <div class="col-md-9">
+                        <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Nominal">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="ntpn" class="col-md-3 col-form-label">NTPN</label>
+                      <div class="col-md-9">
+                        <input class="form-control" id="text-input" type="text" name="text-input" placeholder="NTPN">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="jumlah-pegawai" class="col-md-3 col-form-label">Jumlah Pegawai</label>
+                      <div class="col-md-9">
+                        <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Jumlah pegawai">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="scan">Scan SSBP</label>
+                      <div class="col-md-9">
+                        <input id="file-input" type="file" name="file-input">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-sm btn-primary" type="submit"> Submit</button>
+                    <button class="btn btn-sm btn-secondary" type="reset"> Batalkan</button>
                   </div>
                 </div>
               </div>
