@@ -63,17 +63,7 @@
       <ul class="c-header-nav ml-auto mr-4">
         <li class="c-header-nav-item d-md-down-none mx-2">
           <a class="c-header-nav-link" href="#">
-            <i class="cil-bell"></i>
-          </a>
-        </li>
-        <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
-            <i class="cil-list-rich"></i>
-          </a></li>
-        <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
-            <i class="cil-envelope-open"></i></a></li>
-        <li class="c-header-nav-item dropdown">
-          <a class="c-header-nav-link" href="#">
-            <div class="c-avatar"><i class="cil-apple"></i></div>
+            <p>Officer Pemkab</p>
           </a>
         </li>
       </ul>
@@ -145,12 +135,29 @@
                     </div>
                   </div>
                   <div class="card-footer">
-                    <button class="btn btn-sm btn-primary" type="submit"> Submit</button>
+                    <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#successModal"> Submit</button>
                     <button class="btn btn-sm btn-secondary" type="reset"> Batalkan</button>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-success" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Berhasil</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Data yang anda input sudah berhasil disimpan</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary" type="button" onclick="login()" data-dismiss="modal">Tutup</button>
+                </div>
+              </div>
+              <!-- /.modal-content-->
+            </div>
+            <!-- /.modal-dialog-->
           </div>
         </div>
       </main>
@@ -160,5 +167,10 @@
  <!-- Optional JavaScript -->
  <!-- Popper.js first, then CoreUI JS -->
   <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
+  <script>
+    function login() {
+        window.location.href = "./upload.html"
+      }
+  </script>
  </body>
 </html>
