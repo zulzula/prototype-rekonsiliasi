@@ -132,15 +132,235 @@
         <main class="c-main">
           <div class="container-fluid">
             <div class="fade-in">
-              <div class="card">
-                <div class="card-body">
-                  <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                      <h1 class="display-3">E-Rekonsiliasi</h1>
-                      <p class="lead">
-                        Selamat datang di portal Taspen untuk keperluan
-                        rekonsiliasi.
-                      </p>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="card">
+                    <div class="card-header"><strong>Rekonsiliasi</strong></div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="form-group row col-12">
+                          <label class="col-md-3 col-form-label" for="name"
+                            >Program</label
+                          >
+                          <div class="col-md-9 col-form-label">
+                            <select class="form-control" id="ccprogram">
+                              <option value="0">Pilih program</option>
+                              <option value="1">JKK-JKM</option>
+                              <option value="2">JKK-JKM-DPR</option>
+                              <option value="3">IWP</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row col-12">
+                          <label class="col-md-3 col-form-label" for="name"
+                            >Pemkab</label
+                          >
+                          <div class="col-md-9 col-form-label">
+                            <select class="form-control" id="ccsetoran">
+                              <option value="0">Pilih pemkab</option>
+                              <option value="1">Pemkab 1</option>
+                              <option value="2">Pemkab 2</option>
+                              <option value="3">Pemkab 3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group row col-12">
+                          <label class="col-md-3 col-form-label" for="ccmonth"
+                            >Bulan</label
+                          >
+                          <div class="col-md-3 col-from-label">
+                            <select class="form-control" id="ccmonth">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row col-12">
+                          <label class="col-md-3 col-form-label" for="ccmonth"
+                            >Tahun</label
+                          >
+                          <div class="col-md-3 col-from-label">
+                            <select class="form-control" id="ccmonth">
+                              <option>2021</option>
+                              <option>2022</option>
+                              <option>2023</option>
+                              <option>2024</option>
+                              <option>2025</option>
+                              <option>2026</option>
+                              <option>2027</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button class="btn btn-sm btn-primary" type="reset">
+                        Pilih
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card" id="toggleRekonsiliasi">
+                    <div class="card-header">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <label for=""><strong>Taspen</strong></label>
+                            </div>
+                            <div class="col-md-6">
+                              <label for=""><strong>Pemkab</strong></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <label for="">Induk</label>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <ul class="list-group">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">
+                                  Dapibus ac facilisis in
+                                </li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">
+                                  Porta ac consectetur ac
+                                </li>
+                                <li class="list-group-item">
+                                  Vestibulum at eros
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-6">
+                              <ul class="list-group">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">
+                                  Dapibus ac facilisis in
+                                </li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">
+                                  Porta ac consectetur ac
+                                </li>
+                                <li class="list-group-item">
+                                  Vestibulum at eros
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <br />
+                          <label for="">Susulan</label>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <ul class="list-group">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">
+                                  Dapibus ac facilisis in
+                                </li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">
+                                  Porta ac consectetur ac
+                                </li>
+                                <li class="list-group-item">
+                                  Vestibulum at eros
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-6">
+                              <ul class="list-group">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">
+                                  Dapibus ac facilisis in
+                                </li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">
+                                  Porta ac consectetur ac
+                                </li>
+                                <li class="list-group-item">
+                                  Vestibulum at eros
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <br />
+                          <label for="">Rapel</label>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <ul class="list-group">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">
+                                  Dapibus ac facilisis in
+                                </li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">
+                                  Porta ac consectetur ac
+                                </li>
+                                <li class="list-group-item">
+                                  Vestibulum at eros
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-6">
+                              <ul class="list-group">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">
+                                  Dapibus ac facilisis in
+                                </li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">
+                                  Porta ac consectetur ac
+                                </li>
+                                <li class="list-group-item">
+                                  Vestibulum at eros
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="row justify-content-sm-end">
+                        <div class="col-sm-6">
+                          <div class="row justify-content-sm-end">
+                            <button
+                              class="btn btn-sm btn-primary col-sm-3"
+                              type="reset"
+                              style="margin-right: 2px"
+                            >
+                              Selesai
+                            </button>
+                            <button
+                              class="btn btn-sm btn-primary col-sm-3"
+                              type="reset"
+                              style="margin-right: 2px"
+                            >
+                              Rekonsil
+                            </button>
+                            <button
+                              class="btn btn-sm btn-primary col-sm-3"
+                              type="reset"
+                              style="margin-right: 2px"
+                            >
+                              Ubah
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
