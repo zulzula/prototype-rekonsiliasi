@@ -1,176 +1,286 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- <head>
- <!-- Required meta tags -->
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="icon" href="public/favicon.png">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="public/favicon.png" />
 
- <!-- CoreUI CSS -->
- <link rel="stylesheet" href="css/coreui.min.css">
+    <!-- CoreUI CSS -->
+    <link rel="stylesheet" href="css/coreui.min.css" />
 
- <!-- Icon CSS -->
- <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
- <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css">
- <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/brand.min.css">
- <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/flag.min.css">
+    <!-- Icon CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/brand.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/flag.min.css"
+    />
 
- <title>e-Rekonsiliasi</title>
- </head>
- <body class="c-app">
-   <!-- sidebar -->
-   <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
-    <div class="c-sidebar-brand d-lg-down-none">
-      <img class="c-sidebar-brand-full" style="width: 118px; height: 46px;" src="public/logo.png" alt="">
-      <img class="c-sidebar-brand-minimized" style="width: 46px; height: 46px;" src="public/favicon.ico" alt="">
-    </div>
-     <ul class="c-sidebar-nav">
-       <li class="c-sidebar-nav-item">
-        <a href="#" class="c-sidebar-nav-link">
-          <i class="c-sidebar-nav-icon cil-home"></i> E-Rekonsiliasi
-        </a>
-       </li>
-       <li class="c-sidebar-nav-title">Submission</li>
-       <li class="c-sidebar-nav-item">
-         <a href="#" class="c-sidebar-nav-link">
-           <i class="c-sidebar-nav-icon cil-cloud-upload"></i> Pemkab
-         </a>
-       </li>
-       <li class="c-sidebar-nav-title">Approval</li>
-       <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
-        <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
-          <i class="c-sidebar-nav-icon cil-check-circle"></i> Pemkab
-        </a>
-        <ul class="c-sidebar-nav-dropdown-items">
-          <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link"><span class="c-sidebar-nav-icon"></span>Approval 1</a></li>
-          <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link"><span class="c-sidebar-nav-icon"></span>Approval 2</a></li>
-        </ul>
-      </li>
-
-     </ul>
-     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
-   </div>
-
-   <div class="c-wrapper">
-     <!-- header -->
-    <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
-      <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
-        <span class="c-header-toggler-icon"></span>
-      </button>
-      <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
-        <span class="c-header-toggler-icon"></span>
-      </button>
-      <ul class="c-header-nav ml-auto mr-4">
-        <li class="c-header-nav-item d-md-down-none mx-2">
-          <a class="c-header-nav-link" href="#">
-            <p>Officer Pemkab</p>
+    <title>e-Rekonsiliasi</title>
+  </head>
+  <body class="c-app">
+    <!-- sidebar -->
+    <div
+      class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show"
+      id="sidebar"
+    >
+      <div class="c-sidebar-brand d-lg-down-none">
+        <img
+          class="c-sidebar-brand-full"
+          style="width: 118px; height: 46px"
+          src="public/logo.png"
+          alt=""
+        />
+        <img
+          class="c-sidebar-brand-minimized"
+          style="width: 46px; height: 46px"
+          src="public/favicon.ico"
+          alt=""
+        />
+      </div>
+      <ul class="c-sidebar-nav">
+        <li class="c-sidebar-nav-item">
+          <a href="dashboard1.html" class="c-sidebar-nav-link">
+            <i class="c-sidebar-nav-icon cil-home"></i> Home
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a href="setoran.html" class="c-sidebar-nav-link">
+            <i class="c-sidebar-nav-icon cil-briefcase"></i> Data Setor
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a href="upload.html" class="c-sidebar-nav-link">
+            <i class="c-sidebar-nav-icon cil-cloud-upload"></i> Submit
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a href="rekonsiliasi1.html" class="c-sidebar-nav-link">
+            <i class="c-sidebar-nav-icon cil-check"></i> Rekonsiliasi
           </a>
         </li>
       </ul>
-    </header>
-
-    <!-- content -->
-    <div class="c-body">
-      <main class="c-main">
-        <div class="container-fluid">
-          <div class="fade-in">
-            <div class="row justify-content-md-center">
-              <div class="col-sm-8">
-                <div class="card">
-                  <div class="card-header"><strong>Submit Data</strong></div>
-                  <div class="card-body">
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="name">Program</label>
-                      <div class="col-md-9 col-form-label">
-                        <select class="form-control" id="ccprogram">
-                          <option value="0">Pilih program</option>
-                          <option value="1">JKK-JKM</option>
-                          <option value="2">JKK-JKM-DPR</option>
-                          <option value="3">IURAN</option>
-                          <option value="4">Something Else</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="name">Jenis Setoran</label>
-                      <div class="col-md-9 col-form-label">
-                        <select class="form-control" id="ccsetoran">
-                          <option value="0">Pilih jenis setoran</option>
-                          <option value="1">JKK-JKM</option>
-                          <option value="2">JKK-JKM-DPR</option>
-                          <option value="3">IURAN</option>
-                          <option value="4">Something Else</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="date-input">Tanggal Setor</label>
-                      <div class="col-md-9">
-                        <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date"><span class="help-block">Masukan tanggal yang benar</span>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="nominal" class="col-md-3 col-form-label">Jumlah Setoran</label>
-                      <div class="col-md-9">
-                        <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Nominal">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="ntpn" class="col-md-3 col-form-label">NTPN</label>
-                      <div class="col-md-9">
-                        <input class="form-control" id="text-input" type="text" name="text-input" placeholder="NTPN">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="jumlah-pegawai" class="col-md-3 col-form-label">Jumlah Pegawai</label>
-                      <div class="col-md-9">
-                        <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Jumlah pegawai">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-md-3 col-form-label" for="scan">Scan SSBP</label>
-                      <div class="col-md-9">
-                        <input id="file-input" type="file" name="file-input">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#successModal"> Submit</button>
-                    <button class="btn btn-sm btn-secondary" type="reset"> Batalkan</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-success" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title">Berhasil</h4>
-                </div>
-                <div class="modal-body">
-                  <p>Data yang anda input sudah berhasil disimpan</p>
-                </div>
-                <div class="modal-footer">
-                  <button class="btn btn-secondary" type="button" onclick="login()" data-dismiss="modal">Tutup</button>
-                </div>
-              </div>
-              <!-- /.modal-content-->
-            </div>
-            <!-- /.modal-dialog-->
-          </div>
-        </div>
-      </main>
+      <button
+        class="c-sidebar-minimizer c-class-toggler"
+        type="button"
+        data-target="_parent"
+        data-class="c-sidebar-minimized"
+      ></button>
     </div>
-   </div>
 
- <!-- Optional JavaScript -->
- <!-- Popper.js first, then CoreUI JS -->
-  <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
-  <script>
-    function login() {
-        window.location.href = "./upload.html"
+    <div class="c-wrapper">
+      <!-- header -->
+      <header
+        class="c-header c-header-light c-header-fixed c-header-with-subheader"
+      >
+        <button
+          class="c-header-toggler c-class-toggler d-lg-none mfe-auto"
+          type="button"
+          data-target="#sidebar"
+          data-class="c-sidebar-show"
+        >
+          <span class="c-header-toggler-icon"></span>
+        </button>
+        <button
+          class="c-header-toggler c-class-toggler mfs-3 d-md-down-none"
+          type="button"
+          data-target="#sidebar"
+          data-class="c-sidebar-lg-show"
+          responsive="true"
+        >
+          <span class="c-header-toggler-icon"></span>
+        </button>
+        <ul class="c-header-nav ml-auto mr-4">
+          <li class="c-header-nav-item d-md-down-none mx-2">
+            <a class="c-header-nav-link" href="#">
+              <p>Officer Pemkab</p>
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- content -->
+      <div class="c-body">
+        <main class="c-main">
+          <div class="container-fluid">
+            <div class="fade-in">
+              <div class="row justify-content-md-center">
+                <div class="col-sm-8">
+                  <div class="card">
+                    <div class="card-header"><strong>Submit Data</strong></div>
+                    <div class="card-body">
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="name"
+                          >Program</label
+                        >
+                        <div class="col-md-9 col-form-label">
+                          <select class="form-control" id="ccprogram">
+                            <option value="0">Pilih program</option>
+                            <option value="1">JKK-JKM</option>
+                            <option value="2">JKK-JKM-DPR</option>
+                            <option value="3">IURAN</option>
+                            <option value="4">Something Else</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="name"
+                          >Jenis Setoran</label
+                        >
+                        <div class="col-md-9 col-form-label">
+                          <select class="form-control" id="ccsetoran">
+                            <option value="0">Pilih jenis setoran</option>
+                            <option value="1">JKK-JKM</option>
+                            <option value="2">JKK-JKM-DPR</option>
+                            <option value="3">IURAN</option>
+                            <option value="4">Something Else</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="date-input"
+                          >Tanggal Setor</label
+                        >
+                        <div class="col-md-9">
+                          <input
+                            class="form-control"
+                            id="date-input"
+                            type="date"
+                            name="date-input"
+                            placeholder="date"
+                          /><span class="help-block"
+                            >Masukan tanggal yang benar</span
+                          >
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="nominal" class="col-md-3 col-form-label"
+                          >Jumlah Setoran</label
+                        >
+                        <div class="col-md-9">
+                          <input
+                            class="form-control"
+                            id="text-input"
+                            type="text"
+                            name="text-input"
+                            placeholder="Nominal"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="ntpn" class="col-md-3 col-form-label"
+                          >NTPN</label
+                        >
+                        <div class="col-md-9">
+                          <input
+                            class="form-control"
+                            id="text-input"
+                            type="text"
+                            name="text-input"
+                            placeholder="NTPN"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label
+                          for="jumlah-pegawai"
+                          class="col-md-3 col-form-label"
+                          >Jumlah Pegawai</label
+                        >
+                        <div class="col-md-9">
+                          <input
+                            class="form-control"
+                            id="text-input"
+                            type="text"
+                            name="text-input"
+                            placeholder="Jumlah pegawai"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="scan"
+                          >Scan SSBP</label
+                        >
+                        <div class="col-md-9">
+                          <input
+                            id="file-input"
+                            type="file"
+                            name="file-input"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button
+                        class="btn btn-sm btn-primary"
+                        type="button"
+                        data-toggle="modal"
+                        data-target="#successModal"
+                      >
+                        Submit
+                      </button>
+                      <button class="btn btn-sm btn-secondary" type="reset">
+                        Batalkan
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="modal fade"
+              id="successModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-success" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Berhasil</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Data yang anda input sudah berhasil disimpan</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      onclick="login()"
+                      data-dismiss="modal"
+                    >
+                      Tutup
+                    </button>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then CoreUI JS -->
+    <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
+    <script>
+      function login() {
+        window.location.href = "./upload.html";
       }
-  </script>
- </body>
+    </script>
+  </body>
 </html>
