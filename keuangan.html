@@ -60,7 +60,7 @@
             <i class="c-sidebar-nav-icon cil-calculator"></i> Keuangan
           </a>
         </li>
-        <li class="c-sidebar-nav-item">
+        <li class="c-sidebar-nav-item inactive">
           <a href="kepesertaan.html" class="c-sidebar-nav-link">
             <i class="c-sidebar-nav-icon cil-group"></i> Kepesertaan
           </a>
@@ -156,7 +156,7 @@
                             >Pemkab</label
                           >
                           <div class="col-md-9 col-form-label">
-                            <select class="form-control" id="ccsetoran">
+                            <select class="form-control" id="pemkab">
                               <option value="0">Pilih pemkab</option>
                               <option value="1">Pemkab 1</option>
                               <option value="2">Pemkab 2</option>
@@ -167,11 +167,11 @@
                       </div>
                       <div class="row">
                         <div class="form-group row col-12">
-                          <label class="col-md-3 col-form-label" for="ccmonth"
+                          <label class="col-md-3 col-form-label" for="month"
                             >Bulan</label
                           >
                           <div class="col-md-3 col-from-label">
-                            <select class="form-control" id="ccmonth">
+                            <select class="form-control" id="month">
                               <option>1</option>
                               <option>2</option>
                               <option>3</option>
@@ -192,7 +192,7 @@
                             >Tahun</label
                           >
                           <div class="col-md-3 col-from-label">
-                            <select class="form-control" id="ccmonth">
+                            <select class="form-control" id="year">
                               <option>2021</option>
                               <option>2022</option>
                               <option>2023</option>
@@ -206,12 +206,20 @@
                       </div>
                     </div>
                     <div class="card-footer">
-                      <button class="btn btn-sm btn-primary" type="reset">
+                      <button
+                        class="btn btn-sm btn-primary"
+                        type="reset"
+                        onclick="showRekon()"
+                      >
                         Pilih
                       </button>
                     </div>
                   </div>
-                  <div class="card" id="toggleRekonsiliasi">
+                  <div
+                    class="card"
+                    id="toggleRekonsiliasi"
+                    style="display: none"
+                  >
                     <div class="card-header">
                       <div class="row">
                         <div class="col-md-12">
@@ -220,7 +228,9 @@
                               <label for=""><strong>Taspen</strong></label>
                             </div>
                             <div class="col-md-6">
-                              <label for=""><strong>Pemkab</strong></label>
+                              <label for="" id="nama-pemkab"
+                                ><strong>Pemkab</strong></label
+                              >
                             </div>
                           </div>
                         </div>
@@ -233,32 +243,14 @@
                           <div class="row">
                             <div class="col-sm-6">
                               <ul class="list-group">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">
-                                  Dapibus ac facilisis in
-                                </li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">
-                                  Porta ac consectetur ac
-                                </li>
-                                <li class="list-group-item">
-                                  Vestibulum at eros
-                                </li>
+                                <li class="list-group-item">Rp 200.000.000</li>
+                                <li class="list-group-item">Rp 500.000.000</li>
                               </ul>
                             </div>
                             <div class="col-sm-6">
                               <ul class="list-group">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">
-                                  Dapibus ac facilisis in
-                                </li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">
-                                  Porta ac consectetur ac
-                                </li>
-                                <li class="list-group-item">
-                                  Vestibulum at eros
-                                </li>
+                                <li class="list-group-item">Rp 200.000.000</li>
+                                <li class="list-group-item">Rp 500.000.000</li>
                               </ul>
                             </div>
                           </div>
@@ -267,32 +259,25 @@
                           <div class="row">
                             <div class="col-sm-6">
                               <ul class="list-group">
-                                <li class="list-group-item">Cras justo odio</li>
                                 <li class="list-group-item">
-                                  Dapibus ac facilisis in
+                                  <!-- <div class="col-from-label"> -->
+                                  <select class="form-control" id="ccmonth">
+                                    <option>Rp 98.700.000</option>
+                                    <option>Rp 99.000.000 dari Pemkab B</option>
+                                    <option>Rp 98.000.000 dari Pemkab C</option>
+                                    <option>Rp 98.500.000 dari Pemkab D</option>
+                                  </select>
+                                  <!-- </div> -->
                                 </li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">
-                                  Porta ac consectetur ac
-                                </li>
-                                <li class="list-group-item">
-                                  Vestibulum at eros
-                                </li>
+                                <li class="list-group-item">Rp 50.000.000</li>
+                                <li class="list-group-item">Rp 50.000.000</li>
                               </ul>
                             </div>
                             <div class="col-sm-6">
                               <ul class="list-group">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">
-                                  Dapibus ac facilisis in
-                                </li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">
-                                  Porta ac consectetur ac
-                                </li>
-                                <li class="list-group-item">
-                                  Vestibulum at eros
-                                </li>
+                                <li class="list-group-item">Rp 100.000.000</li>
+                                <li class="list-group-item">Rp 50.000.000</li>
+                                <li class="list-group-item">Rp 50.000.000</li>
                               </ul>
                             </div>
                           </div>
@@ -301,32 +286,12 @@
                           <div class="row">
                             <div class="col-sm-6">
                               <ul class="list-group">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">
-                                  Dapibus ac facilisis in
-                                </li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">
-                                  Porta ac consectetur ac
-                                </li>
-                                <li class="list-group-item">
-                                  Vestibulum at eros
-                                </li>
+                                <li class="list-group-item">Rp 200.000.000</li>
                               </ul>
                             </div>
                             <div class="col-sm-6">
                               <ul class="list-group">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">
-                                  Dapibus ac facilisis in
-                                </li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">
-                                  Porta ac consectetur ac
-                                </li>
-                                <li class="list-group-item">
-                                  Vestibulum at eros
-                                </li>
+                                <li class="list-group-item">Rp 200.000.000</li>
                               </ul>
                             </div>
                           </div>
@@ -341,20 +306,27 @@
                               class="btn btn-sm btn-primary col-sm-3"
                               type="reset"
                               style="margin-right: 2px"
+                              id="button-selesai"
+                              onclick="enableSelesai()"
                             >
                               Selesai
                             </button>
                             <button
-                              class="btn btn-sm btn-primary col-sm-3"
-                              type="reset"
+                              class="btn btn-sm btn-primary col-sm-3 disabled"
+                              type="button"
+                              data-toggle="modal"
+                              data-target="#successModal"
                               style="margin-right: 2px"
+                              id="button-rekonsil"
                             >
                               Rekonsil
                             </button>
                             <button
-                              class="btn btn-sm btn-primary col-sm-3"
+                              class="btn btn-sm btn-primary col-sm-3 disabled"
                               type="reset"
                               style="margin-right: 2px"
+                              id="button-ubah"
+                              onclick="enableUbah()"
                             >
                               Ubah
                             </button>
@@ -366,6 +338,37 @@
                 </div>
               </div>
             </div>
+            <div
+              class="modal fade"
+              id="successModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-success" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Berhasil</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Data yang anda input sudah berhasil disimpan</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      data-dismiss="modal"
+                      onclick="toggleOff()"
+                    >
+                      Tutup
+                    </button>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
+            </div>
           </div>
         </main>
       </div>
@@ -374,5 +377,31 @@
     <!-- Optional JavaScript -->
     <!-- Popper.js first, then CoreUI JS -->
     <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function showRekon() {
+        $("#toggleRekonsiliasi").show();
+        var inputs = document.querySelector("#pemkab option:checked").value;
+        document.getElementById("nama-pemkab").innerHTML = "Pemkab " + inputs;
+      }
+
+      function enableSelesai() {
+        $("#button-ubah").removeClass("disabled");
+        $("#button-rekonsil").removeClass("disabled");
+        $("#button-selesai").addClass("disabled");
+        $('select[id="ccmonth"]').attr("disabled", "");
+      }
+
+      function enableUbah() {
+        $("#button-selesai").removeClass("disabled");
+        $("#button-rekonsil").addClass("disabled");
+        $("#button-ubah").addClass("disabled");
+        $('select[id="ccmonth"]').removeAttr("disabled", "");
+      }
+
+      function toggleOff() {
+        $("#toggleRekonsiliasi").hide();
+      }
+    </script>
   </body>
 </html>
