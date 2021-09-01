@@ -203,7 +203,7 @@
                             type="reset"
                             style="margin-right: 2px"
                             id="cetakcetak"
-                            onclick="printJS('docs/berita_acara.pdf')"
+                            onclick="printnih()"
                             value="Berita Acara"
                           >
                             Cetak Berita Acara
@@ -319,13 +319,9 @@
     <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript">
-      // $("#cetakcetak").live("click", function () {
-      //       var divContents = $("#dvContainer").html();
-      //       var printWindow = window.open('', '', 'height=1200,width=1500');
-      //       printWindow.document.write('<html><head><title>Berita Acara</title>');
-      //       printWindow.document.close();
-      //       printWindow.print();
-      //   });
+      $("#cetakcetak").live("click", function () {
+        printJS('https://zulzula.github.io/prototype-rekonsiliasi/berita_acara.pdf')
+        });
 
       let print = (doc) => {
           let objFra = document.createElement('iframe');   // Create an IFrame.
@@ -334,6 +330,10 @@
           document.body.appendChild(objFra);  // Add the frame to the web page.
           objFra.contentWindow.focus();       // Set focus.
           objFra.contentWindow.print();      // Print it.
+      }
+
+      let printnih = () => {
+        
       }
     </script>
   </body>
