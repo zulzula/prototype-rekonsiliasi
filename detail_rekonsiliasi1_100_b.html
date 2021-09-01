@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="public/favicon.png" />
+
+    <!-- CoreUI CSS -->
+    <link rel="stylesheet" href="css/coreui.min.css" />
+
+    <!-- Icon CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/brand.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/flag.min.css"
+    />
+
+    <title>e-Rekonsiliasi</title>
+  </head>
+  <body class="c-app">
+    <!-- sidebar -->
+    <div
+      class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show"
+      id="sidebar"
+    >
+      <div class="c-sidebar-brand d-lg-down-none">
+        <img
+          class="c-sidebar-brand-full"
+          style="width: 118px; height: 46px"
+          src="public/logo.png"
+          alt=""
+        />
+        <img
+          class="c-sidebar-brand-minimized"
+          style="width: 46px; height: 46px"
+          src="public/favicon.ico"
+          alt=""
+        />
+      </div>
+      <ul class="c-sidebar-nav">
+        <li class="c-sidebar-nav-item">
+          <a href="dashboard1.html" class="c-sidebar-nav-link">
+            <i class="c-sidebar-nav-icon cil-home"></i> Home
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a href="setoran1.html" class="c-sidebar-nav-link">
+            <i class="c-sidebar-nav-icon cil-briefcase"></i> Data Setor
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a href="upload.html" class="c-sidebar-nav-link">
+            <i class="c-sidebar-nav-icon cil-cloud-upload"></i> Submit
+          </a>
+        </li>
+        <li class="c-sidebar-nav-item">
+          <a href="rekonsiliasi1.html" class="c-sidebar-nav-link">
+            <i class="c-sidebar-nav-icon cil-check"></i> Rekonsiliasi
+          </a>
+        </li>
+      </ul>
+      <button
+        class="c-sidebar-minimizer c-class-toggler"
+        type="button"
+        data-target="_parent"
+        data-class="c-sidebar-minimized"
+      ></button>
+    </div>
+
+    <div class="c-wrapper">
+      <!-- header -->
+      <header
+        class="c-header c-header-light c-header-fixed c-header-with-subheader"
+      >
+        <button
+          class="c-header-toggler c-class-toggler d-lg-none mfe-auto"
+          type="button"
+          data-target="#sidebar"
+          data-class="c-sidebar-show"
+        >
+          <span class="c-header-toggler-icon"></span>
+        </button>
+        <button
+          class="c-header-toggler c-class-toggler mfs-3 d-md-down-none"
+          type="button"
+          data-target="#sidebar"
+          data-class="c-sidebar-lg-show"
+          responsive="true"
+        >
+          <span class="c-header-toggler-icon"></span>
+        </button>
+        <ul class="c-header-nav ml-auto mr-4">
+          <li class="c-header-nav-item dropdown">
+            <a
+              class="c-header-nav-link"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <p>Officer Pemkab</p>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right pt-0">
+              <a class="dropdown-item" href="index.html">
+                <svg class="c-icon mr-2">
+                  <use
+                    xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-account-logout"
+                  ></use>
+                </svg>
+                Logout</a
+              >
+            </div>
+          </li>
+        </ul>
+      </header>
+
+      <!-- content -->
+      <div class="c-body">
+        <main class="c-main">
+          <div class="container-fluid">
+            <div class="fade-in">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-md-12">
+                          <label for=""><strong>Rekonsiliasi Iuran JKM Periode Juni 2021</strong></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="">Taspen</label>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="" id="nama-pemkab1"
+                            >Pemkab</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <label for="">Induk</label>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Rp 700.000.000</li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-6">
+                          <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Rp 700.000.000</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <br />
+                      <label for="">Susulan</label>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Rp 200.000.000</li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-6">
+                          <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Rp 200.000.000</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <br />
+                      <label for="">Rapel</label>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Rp 200.000.000</li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-6">
+                          <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Rp 200.000.000</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <br />
+                      <label for="">Total</label>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Rp 1.100.000.000</li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-6">
+                          <ul class="list-group">
+                            <li class="list-group-item list-group-item-success">Rp 1.100.000.000</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="row justify-content-sm-end">
+                    <div class="col-sm-6">
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row justify-content-sm-end">
+                        <button
+                          class="btn btn-sm btn-secondary col-sm-3"
+                          type="button"
+                          data-coreui-toggle="modal"
+                          data-coreui-target="#approveModal"
+                          data-coreui-dismiss="modal"
+                          style="margin-right: 2px"
+                          id="button-selesai"
+                          disabled
+                        >
+                          Approve
+                        </button>
+                        <button
+                          class="btn btn-sm btn-secondary col-sm-3"
+                          type="button"
+                          style="margin-right: 2px"
+                          id="button-rekonsil"
+                          disabled
+                        >
+                          Tolak
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="modal fade"
+              id="approveModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-primary" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Perhatian</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Apakah anda yakin untuk approve rekonsiliasi?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      data-coreui-toggle="modal"
+                      data-coreui-target="#successModal"
+                      data-coreui-dismiss="modal"
+                    >
+                      Ya
+                    </button>
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      data-coreui-dismiss="modal"
+                    >
+                      Tidak
+                    </button>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
+            </div>
+            <div
+              class="modal fade"
+              id="rejectModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-primary" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Perhatian</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Apakah anda yakin untuk reject rekonsiliasi?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      data-coreui-toggle="modal"
+                      data-coreui-target="#successModal"
+                      data-coreui-dismiss="modal"
+                    >
+                      Ya
+                    </button>
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      data-coreui-dismiss="modal"
+                    >
+                      Tidak
+                    </button>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
+            </div>
+            <div
+              class="modal fade"
+              id="successModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-success" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Berhasil</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Data sudah berhasil disimpan</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      data-coreui-dismiss="modal"
+                      onclick="toggleOff()"
+                    >
+                      Tutup
+                    </button>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then CoreUI JS -->
+    <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
+    <script>
+      function toggleOff() {
+        location.href = './rekonsiliasi.html'
+      }
+    </script>
+  </body>
+</html>
