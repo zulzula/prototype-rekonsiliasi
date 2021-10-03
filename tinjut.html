@@ -140,7 +140,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="card">
-                    <div class="card-header"><strong>Rekonsiliasi</strong></div>
+                    <div class="card-header"><strong>Tindak Lanjut PMK</strong></div>
                     <div class="card-body">
                       <div class="row">
                         <div class="form-group row col-12">
@@ -150,9 +150,9 @@
                           <div class="col-md-9 col-form-label">
                             <select class="form-control" id="ccprogram">
                               <option value="0">Pilih program</option>
-                              <option value="jkk">JKK</option>
-                              <option value="jkm">JKM</option>
-                              <option value="iwp">IWP</option>
+                              <option value="1">JKK-JKM</option>
+                              <option value="2">JKK-JKM-DPR</option>
+                              <option value="3">IWP</option>
                             </select>
                           </div>
                         </div>
@@ -163,10 +163,9 @@
                           <div class="col-md-9 col-form-label">
                             <select class="form-control" id="pemkab">
                               <option value="0">Pilih pemkab</option>
-                              <option value="sulsel">Pemprov Sulsel</option>
-                              <option value="makassar">Pemkot Makassar</option>
-                              <option value="parepare">Pemkot Pare - Pare</option>
-                              <option value="maros">Pemkab Maros</option>
+                              <option value="1">Pemkab 1</option>
+                              <option value="2">Pemkab 2</option>
+                              <option value="3">Pemkab 3</option>
                             </select>
                           </div>
                         </div>
@@ -178,18 +177,18 @@
                           >
                           <div class="col-md-3 col-from-label">
                             <select class="form-control" id="month">
-                              <option value="1">Januari</option>
-                              <option value="2">Februari</option>
-                              <option value="3">Maret</option>
-                              <option value="4">April</option>
-                              <option value="5">Mei</option>
-                              <option value="6">Juni</option>
-                              <option value="7">Juli</option>
-                              <option value="8">Agustus</option>
-                              <option value="9">September</option>
-                              <option value="10">Oktober</option>
-                              <option value="11">November</option>
-                              <option value="12">Desember</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
                             </select>
                           </div>
                         </div>
@@ -221,10 +220,62 @@
                       </button>
                     </div>
                   </div>
-                  <div class="card" id="toggleRekonsiliasi" style="display: none">
-                    <div class="card-body" id="createListKeuangan">
-                      <!-- will fill this with automation -->
+                  <div
+                    class="card"
+                    id="toggleRekonsiliasi"
+                    style="display: none"
+                  >
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col-md-12">
+                            <label for=""><strong>Pemkab</strong></label>
+                      </div>
                     </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row"><table class="table table-responsive-sm">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Notas</th>
+                          <th>Nama</th>
+                          <th>Nominal</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>1</td>
+                          <td>Person A</td>
+                          <td>Rp 6.000.000</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>2</td>
+                          <td>Person B</td>
+                          <td>Rp 5.000.000</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td>3</td>
+                          <td>Person C</td>
+                          <td>Rp 5.500.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                     <div class="card-footer">
                       <div class="row justify-content-sm-end">
                         <div class="col-sm-6">
@@ -236,17 +287,17 @@
                               id="button-selesai"
                               onclick="enableSelesai()"
                             >
-                              Tinjut PMK
+                              Individu
                             </button>
                             <button
-                              class="btn btn-sm btn-primary col-sm-3 disabled"
+                              class="btn btn-sm btn-primary col-sm-3"
                               type="button"
                               data-coreui-toggle="modal"
                               data-coreui-target="#successModal"
                               style="margin-right: 2px"
                               id="button-rekonsil"
                             >
-                              Rekonsiliasi
+                              Kasda
                             </button>
                           </div>
                         </div>
@@ -296,62 +347,18 @@
     <!-- Popper.js first, then CoreUI JS -->
     <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/all_variable.js"></script>
     <script>
       function showRekon() {
         $("#toggleRekonsiliasi").show();
-        var nama_pemkab = document.querySelector("#pemkab option:checked").value;
-        var periode = document.querySelector("#month option:checked").value;
-        var program = document.querySelector("#ccprogram option:checked").value;
-        peserta_taspen = data_taspen.filter(el => el.periode == periode & el.pemda == nama_pemkab)[0]
-        peserta_pemkab = data_pemkab.filter(el => el.periode == periode & el.pemda == nama_pemkab)[0]
-        peserta_pmk = data_pmk.filter(el => el.periode == periode & el.pemda == nama_pemkab)[0]
-        new_nama_pemkab  = ""
-        if (nama_pemkab == 'sulsel') {
-          new_nama_pemkab = 'Pemprov Sulsel';
-        } else if (nama_pemkab == 'makassar') {
-          new_nama_pemkab = 'Pemkot Makassar';
-        } else if (nama_pemkab == 'parepare') {
-          new_nama_pemkab = 'Pemkot Pare-Pare';
-        } else {
-          new_nama_pemkab = 'Pemkab ' + nama_pemkab[0].toUpperCase() + nama_pemkab.slice(1)
-        }
-
-        induk_taspen = '0'
-        induk_pemkab = '0'
-        induk_pmk = '0'
-        if (program == 'jkk') {
-          induk_taspen = peserta_taspen.jkk
-          induk_pemkab = peserta_pemkab.jkk
-          induk_pmk = peserta_pmk.jkk
-        } else if (program == 'jkm') {
-          induk_taspen = peserta_taspen.jkm
-          induk_pemkab = peserta_pemkab.jkm
-          induk_pmk = peserta_pmk.jkm
-        } else {
-          induk_taspen = peserta_taspen.iwp
-          induk_pemkab = peserta_pemkab.iwp
-          induk_pmk = peserta_pmk.iwp
-        }
-
-        jumlah_peserta_taspen = (parseInt(peserta_taspen.peserta.replace(/[.]+/g,"")) + parseInt(peserta_pmk.peserta.replace(/[.]+/g,""))).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-        jumlah_peserta_pemkab = peserta_pemkab.peserta
-
-        jumlah_pemkab = parseInt(induk_pemkab.replace(/[.]+/g,""))
-        jumlah_taspen = parseInt(induk_taspen.replace(/[.]+/g,"")) + parseInt(induk_pmk.replace(/[.]+/g,""));
-
-        selisih = Math.abs(jumlah_pemkab - jumlah_taspen)
-        html = `<div class="row"><div class="col-sm-12"><div class="row"><div class="col-sm-6"><h4 class="card-title">Taspen</h4></div><div class="col-sm-6"><h4 class="card-title" id="nama-pemkab">${new_nama_pemkab}</h4></div></div><hr style="border-top:2px solid"></div><div class="col-sm-12"><br><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Peserta<span>${peserta_taspen.peserta}</span></li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Peserta<span>${peserta_pemkab.peserta}</span></li></ul></div></div><hr size="10"><label for="">Induk</label><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp ${induk_taspen}</li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp ${induk_pemkab}</li></ul></div></div><br><label for="">Susulan</label><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul></div></div><br><label for="">Rapel</label><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul><hr></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul></div></div></div><div class="col-sm-12"><h5 class="card-title">PMK</h5><div class="row"><div class="col-sm-6"><hr></div></div></div><div class="col-sm-12"><br><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Peserta<span>${peserta_pmk.peserta}</span></li><li class="list-group-item d-flex justify-content-between align-items-center">Nominal<span>${induk_pmk}</span></li></ul></div></div><hr style="border-top:2px solid"></div><div class="col-sm-12"><br><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">Peserta<span>${jumlah_peserta_taspen}</span></li><li class="list-group-item list-group-item-success">= Rp ${jumlah_taspen.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">Peserta<span>${jumlah_peserta_pemkab}</span></li><li class="list-group-item list-group-item-success">= Rp ${jumlah_pemkab.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</li></ul></div></div><hr></div><div class="col-sm-12"><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Selisih<span>Rp ${selisih}</span></li><li class="list-group-item disabled"><div class="form-group row col-6"><label class="col-md-12" for="ccmonth">Jenis Selisih</label><div class="col-md-12"><select class="form-control" id="year"><option>Pilih</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option><option>2027</option></select></div></div></li></ul></div></div></div></div>`
-        document.getElementById("createListKeuangan").innerHTML = html;
+        var inputs = document.querySelector("#pemkab option:checked").value;
+        document.getElementById("nama-pemkab1").innerHTML = "Pemkab " + inputs;
+        document.getElementById("nama-pemkab2").innerHTML = "Pemkab " + inputs;
       }
 
       function enableSelesai() {
         $("#button-ubah").removeClass("disabled");
         $("#button-rekonsil").removeClass("disabled");
-        $("#button-selesai").addClass("disabled");
         $('select[id="ccmonth"]').attr("disabled", "");
-        var redirectWindow = window.open('tinjut.html', '_blank');
-        redirectWindow.location;
       }
 
       function enableUbah() {
