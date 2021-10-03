@@ -242,7 +242,7 @@
                               class="btn btn-sm btn-primary col-sm-3 disabled"
                               type="button"
                               data-coreui-toggle="modal"
-                              data-coreui-target="#successModal"
+                              data-coreui-target="#approveModal"
                               style="margin-right: 2px"
                               id="button-rekonsil"
                             >
@@ -255,6 +255,45 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="modal fade"
+              id="approveModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-primary" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Perhatian</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Apakah anda yakin untuk melakukan rekonsiliasi?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      data-coreui-toggle="modal"
+                      data-coreui-target="#successModal"
+                      data-coreui-dismiss="modal"
+                    >
+                      Ya
+                    </button>
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      data-coreui-dismiss="modal"
+                    >
+                      Tidak
+                    </button>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
             </div>
             <div
               class="modal fade"
@@ -341,7 +380,7 @@
         jumlah_taspen = parseInt(induk_taspen.replace(/[.]+/g,"")) + parseInt(induk_pmk.replace(/[.]+/g,""));
 
         selisih = Math.abs(jumlah_pemkab - jumlah_taspen)
-        html = `<div class="row"><div class="col-sm-12"><div class="row"><div class="col-sm-6"><h4 class="card-title">Taspen</h4></div><div class="col-sm-6"><h4 class="card-title" id="nama-pemkab">${new_nama_pemkab}</h4></div></div><hr style="border-top:2px solid"></div><div class="col-sm-12"><br><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Peserta<span>${peserta_taspen.peserta}</span></li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Peserta<span>${peserta_pemkab.peserta}</span></li></ul></div></div><hr size="10"><label for="">Induk</label><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp ${induk_taspen}</li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp ${induk_pemkab}</li></ul></div></div><br><label for="">Susulan</label><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul></div></div><br><label for="">Rapel</label><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul><hr></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul></div></div></div><div class="col-sm-12"><h5 class="card-title">PMK</h5><div class="row"><div class="col-sm-6"><hr></div></div></div><div class="col-sm-12"><br><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Peserta<span>${peserta_pmk.peserta}</span></li><li class="list-group-item d-flex justify-content-between align-items-center">Nominal<span>${induk_pmk}</span></li></ul></div></div><hr style="border-top:2px solid"></div><div class="col-sm-12"><br><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">Peserta<span>${jumlah_peserta_taspen}</span></li><li class="list-group-item list-group-item-success">= Rp ${jumlah_taspen.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">Peserta<span>${jumlah_peserta_pemkab}</span></li><li class="list-group-item list-group-item-success">= Rp ${jumlah_pemkab.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</li></ul></div></div><hr></div><div class="col-sm-12"><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Selisih<span>Rp ${selisih}</span></li><li class="list-group-item disabled"><div class="form-group row col-6"><label class="col-md-12" for="ccmonth">Jenis Selisih</label><div class="col-md-12"><select class="form-control" id="year"><option>Pilih</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option><option>2027</option></select></div></div></li></ul></div></div></div></div>`
+        html = `<div class="row"><div class="col-sm-12"><div class="row"><div class="col-sm-6"><h4 class="card-title">Taspen</h4></div><div class="col-sm-6"><h4 class="card-title" id="nama-pemkab">${new_nama_pemkab}</h4></div></div><hr style="border-top:2px solid"></div><div class="col-sm-12"><br><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Peserta<span>${peserta_taspen.peserta}</span></li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Peserta<span>${peserta_pemkab.peserta}</span></li></ul></div></div><hr size="10"><label for="">Induk</label><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp ${induk_taspen}</li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp ${induk_pemkab}</li></ul></div></div><br><label for="">Susulan</label><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul></div></div><br><label for="">Rapel</label><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul><hr></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item">Rp 0</li></ul></div></div></div><div class="col-sm-12"><h5 class="card-title">PMK</h5><div class="row"><div class="col-sm-6"><hr></div></div></div><div class="col-sm-12"><br><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Peserta<span>${peserta_pmk.peserta}</span></li><li class="list-group-item d-flex justify-content-between align-items-center">Nominal<span>Rp ${induk_pmk}</span></li></ul></div></div><hr style="border-top:2px solid"></div><div class="col-sm-12"><br><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">Peserta<span>${jumlah_peserta_taspen}</span></li><li class="list-group-item list-group-item-success">= Rp ${jumlah_taspen.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</li></ul></div><div class="col-sm-6"><ul class="list-group"><li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">Peserta<span>${jumlah_peserta_pemkab}</span></li><li class="list-group-item list-group-item-success">= Rp ${jumlah_pemkab.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</li></ul></div></div><hr></div><div class="col-sm-12"><div class="row"><div class="col-sm-6"><ul class="list-group"><li class="list-group-item d-flex justify-content-between align-items-center">Selisih<span>Rp ${selisih}</span></li><li class="list-group-item disabled"><div class="form-group row col-6"><label class="col-md-12" for="ccmonth">Jenis Selisih</label><div class="col-md-12"><select class="form-control" id="year"><option>Pilih</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option><option>2027</option></select></div></div></li></ul></div></div></div></div>`
         document.getElementById("createListKeuangan").innerHTML = html;
       }
 
@@ -362,6 +401,7 @@
       }
 
       function toggleOff() {
+        window.location.href = 'keuangan.html'
         $("#toggleRekonsiliasi").hide();
       }
     </script>

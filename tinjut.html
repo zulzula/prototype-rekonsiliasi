@@ -150,9 +150,9 @@
                           <div class="col-md-9 col-form-label">
                             <select class="form-control" id="ccprogram">
                               <option value="0">Pilih program</option>
-                              <option value="1">JKK-JKM</option>
-                              <option value="2">JKK-JKM-DPR</option>
-                              <option value="3">IWP</option>
+                              <option value="jkk">JKK</option>
+                              <option value="jkm">JKM</option>
+                              <option value="iwp">IWP</option>
                             </select>
                           </div>
                         </div>
@@ -163,9 +163,16 @@
                           <div class="col-md-9 col-form-label">
                             <select class="form-control" id="pemkab">
                               <option value="0">Pilih pemkab</option>
-                              <option value="1">Pemkab 1</option>
-                              <option value="2">Pemkab 2</option>
-                              <option value="3">Pemkab 3</option>
+                              <option value="SULSEL">Pemprov Sulsel</option>
+                              <option value="GOWA">Pemkab Gowa</option>
+                              <option value="TAKALAR">Pemkab Takalar</option>
+                              <option value="PANGKEP">Pemkab Pangkep</option>
+                              <option value="BARRU">Pemkab Barru</option>
+                              <option value="SIDRAP">Pemkab Sidrap</option>
+                              <option value="ENREKANG">Pemkab Enrekang</option>
+                              <option value="PINRANG">Pemkab Pinrang</option>
+                              <option value="PAREPARE">Pemkot Pare-Pare</option>
+                              <option value="MAKASSAR">Pemkot Makassar</option>
                             </select>
                           </div>
                         </div>
@@ -177,18 +184,18 @@
                           >
                           <div class="col-md-3 col-from-label">
                             <select class="form-control" id="month">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>8</option>
-                              <option>9</option>
-                              <option>10</option>
-                              <option>11</option>
-                              <option>12</option>
+                              <option value="1">Januari</option>
+                              <option value="2">Februari</option>
+                              <option value="3">Maret</option>
+                              <option value="4">April</option>
+                              <option value="5">Mei</option>
+                              <option value="6">Juni</option>
+                              <option value="7">Juli</option>
+                              <option value="8">Agustus</option>
+                              <option value="9">September</option>
+                              <option value="10">Oktober</option>
+                              <option value="11">November</option>
+                              <option value="12">Desember</option>
                             </select>
                           </div>
                         </div>
@@ -225,56 +232,10 @@
                     id="toggleRekonsiliasi"
                     style="display: none"
                   >
-                  <div class="card-header">
-                    <div class="row">
-                      <div class="col-md-12">
-                            <label for=""><strong>Pemkab</strong></label>
-                      </div>
-                    </div>
-                  </div>
                   <div class="card-body">
-                    <div class="row"><table class="table table-responsive-sm">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Notas</th>
-                          <th>Nama</th>
-                          <th>Nominal</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
-                          <td>1</td>
-                          <td>Person A</td>
-                          <td>Rp 6.000.000</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
-                          <td>2</td>
-                          <td>Person B</td>
-                          <td>Rp 5.000.000</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
-                          <td>3</td>
-                          <td>Person C</td>
-                          <td>Rp 5.500.000</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="row" id=createTable>
+                        <!-- this table will be created with function -->
+                    </div>
                   </div>
                     <div class="card-footer">
                       <div class="row justify-content-sm-end">
@@ -282,7 +243,9 @@
                           <div class="row justify-content-sm-end">
                             <button
                               class="btn btn-sm btn-primary col-sm-3"
-                              type="reset"
+                              type="button"
+                              data-coreui-toggle="modal"
+                              data-coreui-target="#approveModalIndividu"
                               style="margin-right: 2px"
                               id="button-selesai"
                               onclick="enableSelesai()"
@@ -293,7 +256,7 @@
                               class="btn btn-sm btn-primary col-sm-3"
                               type="button"
                               data-coreui-toggle="modal"
-                              data-coreui-target="#successModal"
+                              data-coreui-target="#approveModalKasda"
                               style="margin-right: 2px"
                               id="button-rekonsil"
                             >
@@ -306,6 +269,84 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="modal fade"
+              id="approveModalIndividu"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-primary" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Perhatian</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Apakah anda yakin untuk melakukan pembayaran ke Individu?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      data-coreui-toggle="modal"
+                      data-coreui-target="#successModal"
+                      data-coreui-dismiss="modal"
+                    >
+                      Ya
+                    </button>
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      data-coreui-dismiss="modal"
+                    >
+                      Tidak
+                    </button>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
+            </div>
+            <div
+              class="modal fade"
+              id="approveModalKasda"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-primary" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Perhatian</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Apakah anda yakin untuk melakukan pembayaran ke Kasda?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      data-coreui-toggle="modal"
+                      data-coreui-target="#successModal"
+                      data-coreui-dismiss="modal"
+                    >
+                      Ya
+                    </button>
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      data-coreui-dismiss="modal"
+                    >
+                      Tidak
+                    </button>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
             </div>
             <div
               class="modal fade"
@@ -347,12 +388,48 @@
     <!-- Popper.js first, then CoreUI JS -->
     <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/all_variable.js"></script>
     <script>
       function showRekon() {
         $("#toggleRekonsiliasi").show();
-        var inputs = document.querySelector("#pemkab option:checked").value;
-        document.getElementById("nama-pemkab1").innerHTML = "Pemkab " + inputs;
-        document.getElementById("nama-pemkab2").innerHTML = "Pemkab " + inputs;
+        var pemkab = document.querySelector("#pemkab option:checked").value;
+        var program = document.querySelector("#ccprogram option:checked").value;
+        var bulan = document.querySelector("#month option:checked").value;
+        program_label = ''
+        if (program == 'iwp') {
+          program_label = 'Total Iuran IWP'
+        } else {
+          program_label = program.toUpperCase()
+        }
+
+        html = `<table class="table table-responsive-sm"><thead><tr><th></th><th>NIP</th><th>Nama</th><th>THT</th><th>Pensiun</th><th>${program_label}</th><th>Instansi</th></tr></thead>`
+
+        data_filter_pml_individu = data_pmk_individu.filter(el => el.pemda.toUpperCase() == pemkab & el.periode == bulan)
+
+        html += '<tbody>'
+        data_filter_pml_individu.forEach(element => {
+          html += '<tr>'
+          html += `<td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></div></td>`
+          html += `<td>${element.nip}</td>`
+          html += `<td>${element.nama}</td>`
+          html += `<td>${element.tht}</td>`
+          html += `<td>${element.pensiun}</td>`
+          program_variable = ''
+          if (program == 'iwp') {
+            program_variable = element.total_iwp
+          } else if (program == 'jkm') {
+            program_variable = element.jkm
+          } else {
+            program_variable = element.jkk
+          }
+
+          html += `<td>${program_variable}</td>`
+          html += `<td>${element.instansi}</td>`
+          html += `</tr>`
+        });
+        html += '</tbody></table>'
+
+        document.getElementById("createTable").innerHTML = html;
       }
 
       function enableSelesai() {
